@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkpoint 3 Front</title>
+    <link rel="stylesheet" href="./CSS/style.CSS">
+</head>
+
+<body>
+    <header class="vertical-align navigate-container">
+        <nav>
+            <ul class="vertical-align">
+                <li><a class="vertical-align" target="_blank"><img src="./IMAGES/FiapLogo.png" alt=""></a></li>
+                <li><a href="" target="_blank">CADASTRE-SE</a></li>
+                <li><a href="" target="_blank">PORTAL DO ALUNO</a></li>
+                <li><a href="" target="_blank">GRADUAÇÃO</a></li>
+                <li><a href="" target="_blank">POS-TECH</a></li>
+                <li><a href="" target="_blank">SITE OFICIAL</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <section>
+                <h1>Dados pessoais</h1>
+                <fieldset>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Ex: Carlos Roberto" required>
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Ex: email@gmail.com" pattern="^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$" required>
+                </fieldset>
+                <fieldset>
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Ex: 123.234.353-12" pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$" required>
+                </fieldset>
+                <fieldset>
+                    <label for="data-nascimento">Data de nascimento</label>
+                    <input type="date" name="data-nascimento" id="data-nascimento" placeholder="Ex: 01/02/1990" required>
+                </fieldset>
+                <fieldset>
+                    <label for="genero">Gênero</label>
+                    <select name="genero" id="genero" required>
+                        <option value="" disabled selected>-</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="raca">Raça</label>
+                    <select name="raca" id="raca" required>
+                        <option value="" disabled selected>-</option>
+                        <option value="branco">Branco</option>
+                        <option value="preto">Preto</option>
+                        <option value="pardo">Pardo</option>
+                        <option value="indigena">Indígena</option>
+                        <option value="oriental">Oriental</option>
+                        <option value="nao_declarar">Prefiro não declarar</option>
+                    </select>
+                </fieldset>
+            </section>
+            <section>
+                <h1>Endereço</h1>
+                <fieldset>
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" placeholder="Ex: 01235-45" pattern="^\d{5}\-\d{3}$" required>
+                </fieldset>
+                <fieldset>
+                    <label for="rua">Rua</label>
+                    <input type="text" name="rua" id="rua" placeholder="Ex: Av. Oito" required>
+                </fieldset>
+                <fieldset>
+                    <label for="numero">Número</label>
+                    <input type="number" name="numero" id="numero" placeholder="Ex: 123" required>
+                </fieldset>
+                <fieldset>
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Ex: São Paulo" required>
+                </fieldset>
+                <fieldset>
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" placeholder="Ex: São Paulo" required>
+                </fieldset>
+                <fieldset>
+                    <label for="complemento">Complemento</label>
+                    <input type="text" name="complemento" id="complemento">
+                </fieldset>
+            </section>
+            <section>
+                <h1>Senha</h1>
+                <fieldset>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="******" required>
+                </fieldset>
+                <fieldset>
+                    <label for="senha-confirmacao">Confirmação de senha</label>
+                    <input type="password" name="senha-confirmacao" id="senha-confirmacao" placeholder="******" required>
+                </fieldset>
+            </section>
+            <footer>
+                <button type="submit">Cadastrar</button>
+            </footer>
+        </form>
+    </main>
+
+    <footer class="navigate-container">
+
+    </footer>
+
+    <script src="./JS/script.JS"></script>
+</body>
+
+</html>
