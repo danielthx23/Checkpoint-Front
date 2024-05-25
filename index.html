@@ -43,13 +43,13 @@
                     </fieldset>
                     <fieldset id="dadosNascimento">
                         <label for="data-nascimento">Data de nascimento</label>
-                        <input type="date" name="data-nascimento" id="data-nascimento" placeholder="Ex: 01/02/1990"
-                            required>
+                        <input type="text" name="data-nascimento" id="data-nascimento" placeholder="Ex: 01/02/1990"
+                            pattern="^\d{2}/\d{2}/\d{4}$" required>
                     </fieldset>
                     <fieldset id="dadosGenero">
                         <label for="genero">Gênero</label>
                         <select name="genero" id="genero" required>
-                            <option value="" disabled selected>-</option>
+                            <option id="desligado-select" value="" disabled selected>-</option>
                             <option value="masculino">Masculino</option>
                             <option value="feminino">Feminino</option>
                             <option value="outros">Outros</option>
@@ -58,7 +58,7 @@
                     <fieldset id="dadosRaca">
                         <label for="raca">Raça</label>
                         <select name="raca" id="raca" required>
-                            <option value="" disabled selected>-</option>
+                            <option id="desligado-select" value="" disabled selected>-</option>
                             <option value="branco">Branco</option>
                             <option value="preto">Preto</option>
                             <option value="pardo">Pardo</option>

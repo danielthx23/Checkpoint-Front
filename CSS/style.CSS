@@ -52,7 +52,7 @@ main {
 }
 
 main form {
-    padding: 2rem;
+    padding: 1rem 2rem;
     width: 80%;
     height: 95%;
     background: #4B4B4B;
@@ -63,12 +63,8 @@ main form {
 form h1 {
     margin: 1rem 0 1rem 0;
     color: white;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 80;
-}
-
-form h1:first-child {
-    margin: 0 0 1rem 0;
 }
 
 .section-margin {
@@ -122,16 +118,24 @@ fieldset {
     flex-direction: column;
 }
 
-fieldset label {
-    font-size: 1rem;
+fieldset label,
+select,
+option,
+input {
+    font-size: 0.8rem;
     color: white;
 }
 
-fieldset input, select {
+#desligado-select {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+fieldset input,
+select {
     padding: 0.8rem;
     background: #22262A;
-border-radius: 5px;
-border: none;
+    border-radius: 5px;
+    border: none;
 }
 
 form footer {
@@ -140,5 +144,23 @@ form footer {
 
 .botao-form {
     width: 100%;
+    margin: 1rem 0 0 0;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    background-color: #ED185C;
+    color: white;
+    cursor: pointer;
+    transition: ease 0.1s;
+}
+
+.botao-form:hover {
+    background-color: white;
+    color: #ED185C;
+    border: 3px solid #ED185C;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
