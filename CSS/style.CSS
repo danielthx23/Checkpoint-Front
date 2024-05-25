@@ -8,13 +8,14 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #595C5F;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .navigate-container {
-    width: 100vw;
+    z-index: 1;
+    width: 100%;
     height: 5vh;
     background-color: #171A1C;
     border-bottom: 1px solid #22262A;
@@ -22,20 +23,55 @@ body {
     padding: 0 1rem 0 1rem;
 }
 
-nav ul {
+.footer-container {
+    width: 100%;
+    height: 5vh;
+    background-color: #171A1C;
+    border-bottom: 1px solid #22262A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 1rem 0 1rem;
+}
+
+.navigate-desktop ul {
     flex-direction: row;
     list-style: none;
     gap: 20px;
 }
 
-nav img {
+.navigate-desktop img {
     height: 5vh;
     width: auto;
 }
 
-nav ul li a {
+.navigate-desktop ul li a {
     color: white;
     font-size: 0.8rem;
+}
+
+.navigate-mobile {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 7vh;
+    background: #171A1C;
+    border-top: 1px solid #171A1C;
+    padding: 1rem;
+}
+
+.navigate-mobile ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.navigate-mobile img {
+    width: auto;
+    height: 1.5rem;
 }
 
 .vertical-align {
@@ -164,3 +200,87 @@ form footer {
     color: rgba(255, 255, 255, 0.5);
 }
 
+
+.resultado {
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100vh;
+    background: #4B4B4B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.json-container {
+    width: 80%;
+    justify-content: baseline;
+}
+
+.resultado h1 {
+    margin: 1rem 0 1rem 0;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 80;
+}
+
+.resultado footer {
+    width: 100%;
+}
+
+.resultado button {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color: #ED185C;
+    border: 3px solid #ED185C;
+    cursor: pointer;
+    transition: ease 0.1s;
+}
+
+.resultado button:hover {
+    background-color: #ED185C;
+    color: white;
+    border: 3px solid white;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 991px) {
+
+    .footer-container {
+        margin-bottom: 7vh;
+    }
+
+    main {
+        height: 100%;
+    }
+
+    main form {
+        padding: 1rem 1rem;
+        width: 100%;
+        height: 95%;
+    }
+
+    .section-dados {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .section-endereco {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-link {
+        display: none;
+    }
+}
